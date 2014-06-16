@@ -8,8 +8,9 @@ public class Database {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Connection con = null; 
 		try{
-			Connection con = DriverManager.getConnection("jdbc:derby:C:\\Users\\Sayyeda_2\\MyDB;");
+			con = DriverManager.getConnection("jdbc:derby:C:\\Users\\Sayyeda_2\\MyDB;");
 			Statement query = con.createStatement();
 			ResultSet set = query.executeQuery("select * from Persons");
 			while(set.next()){
@@ -20,12 +21,24 @@ public class Database {
 				
 			}
 			
-		con.close();
+		
 		}catch(SQLException e ){
 		
 			e.printStackTrace();
 		}
-
-	}
-
+		
+		
+		finally {
+			try{
+			con.close();
+			}
+			catch(SQLException e)
+			{
+				e.printStackTrace();
+			}
+			}
+		}
 }
+
+
+
