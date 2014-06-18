@@ -1,5 +1,8 @@
 package database;
 import java.sql.*;
+
+import javax.swing.JOptionPane;
+
 import org.apache.*;
 public class Database {
 
@@ -25,7 +28,10 @@ public class Database {
 		}catch(SQLException e ){
 		
 			e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "Sorry Database Not Connected Reload application");
+			
 		}
+	
 		
 		
 		finally {
