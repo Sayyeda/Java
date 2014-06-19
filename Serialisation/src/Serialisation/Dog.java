@@ -2,6 +2,8 @@ package Serialisation;
 
 import java.io.*;
 
+import serialisation2.Animal;
+
 public class Dog extends Animal implements Tricks{
 
 	public Dog() {

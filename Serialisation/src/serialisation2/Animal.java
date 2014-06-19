@@ -1,4 +1,4 @@
-package Serialisation;
+package serialisation2;
 
 
 public abstract class Animal implements java.io.Serializable {
