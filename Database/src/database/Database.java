@@ -15,10 +15,36 @@ public class Database {
 		try{
 			con = DriverManager.getConnection("jdbc:derby:C:\\Users\\Sayyeda_2\\MyDB;");
 			Statement query = con.createStatement();
+			Statement sta = con.createStatement(); 
+
+		
+			
+			     //INSERTING VALUE IN DATABSE:
+			
+//			      int c = sta.executeUpdate("INSERT INTO Persons"
+//			        + " (FirstName, LastName)"
+//			        + " VALUES ('Sayyeda', 'Najam')");
+//			      int f = sta.executeUpdate("INSERT INTO Persons"
+//					        + " (FirstName, LastName)"
+//					        + " VALUES ('Tim', 'Riley')");
+//			      int g = sta.executeUpdate("INSERT INTO Persons"
+//					        + " (FirstName, LastName)"
+//					        + " VALUES ('Jack', 'Frost')");
+////			      
+			      			  
+////			    //DELETING VALUE IN DATABASE:
+//			       int d = sta.executeUpdate(
+//			        "DELETE FROM Persons WHERE FirstName = 'Sayyeda' ");
+//			    
+//			     //UPDATING DATBASE:  
+//			    int e = sta.executeUpdate(
+//			    	        "UPDATE Persons SET LastName = 'Najam'");
+//			      
 			ResultSet set = query.executeQuery("select * from Persons");
 			while(set.next()){
 			
 				System.out.print(set.getString("FirstName"));
+				System.out.print((" "));
 			    System.out.print(set.getString("LastName"));
 				System.out.print(("   "));
 				
